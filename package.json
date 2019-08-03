@@ -1,0 +1,31 @@
+{
+  "name": "duck-interface",
+  "version": "1.0.0",
+  "description": "Interfaces for duck typing approach",
+  "keywords": [
+    "duck-typing",
+    "interface",
+    "oop"
+  ],
+  "author": "Damian Łysiak <damian.lysiak@gmail.com>",
+  "homepage": "https://github.com/damlys/js-duck-interface",
+  "repository": "https://github.com/damlys/js-duck-interface",
+  "bugs": "https://github.com/damlys/js-duck-interface/issues",
+  "license": "UNLICENSED",
+  "scripts": {
+    "test": "jest"
+  },
+  "main": "src/DuckInterface.js",
+  "files": [
+    "src"
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}

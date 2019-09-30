@@ -13,7 +13,7 @@ function DuckInterface(methods, attributes = []) {
 }
 
 /**
- * Checks if given object contains required methods and attributes.
+ * Checks if a given object contains required methods and attributes.
  *
  * @param {Object} object
  * @throws {Error}
@@ -36,9 +36,9 @@ DuckInterface.prototype.isImplementedBy = function (object) {
     }
   }
 
-  // Throw error if missing items found
+  // Throw an error if missing properties found
   if (missingMethods.length > 0 || missingAttributes.length > 0) {
-    let message = 'Object does not implement interface.';
+    let message = 'An object does not implement the interface.';
     if (missingMethods.length > 0) {
       message += ' Missing methods: ' + missingMethods.join(', ') + '.';
     }

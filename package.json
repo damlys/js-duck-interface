@@ -1,6 +1,6 @@
 {
   "name": "duck-interface",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Interfaces for duck typing approach",
   "keywords": [
     "duck-typing",

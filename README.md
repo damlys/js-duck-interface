@@ -18,10 +18,10 @@ $ npm install --save duck-interface
 ```javascript
 const { DuckInterface } = require('duck-interface');
 
-let iExecutable = new DuckInterface(['execute']);
-let iWritable = new DuckInterface(['write'], ['writer']);
+const iExecutable = new DuckInterface(['execute']);
+const iWritable = new DuckInterface(['write'], ['writer']);
 
-let exampleCommand = {
+const exampleCommand = {
   execute: function() {
     console.log('Doing some stuff...');
   }
@@ -31,7 +31,7 @@ iExecutable.isImplementedBy(exampleCommand);
 // Nothing happens, just continuing
 
 iWritable.isImplementedBy(exampleCommand);
-// Throws an error: "Object does not implement interface. Missing methods: write. Missing attributes: writer."
+// Throws an error: "An object does not implement the interface. Missing methods: write. Missing attributes: writer."
 ```
 
 ## How it works
@@ -48,8 +48,8 @@ JavaScript types considered as a valid method:
 JavaScript types considered as a valid attribute:
 
 - `boolean`
-- `number`
-- `object` (that means also a `null` value)
+- `number` (that means also `NaN` and `Infinity` values)
+- `object` (also `null` value)
 - `string`
 - `symbol`
 

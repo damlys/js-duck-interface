@@ -5,14 +5,16 @@ test('passes a correct implementation', () => {
     a1: null,
     a2: false,
     a3: 0,
-    a4: '',
-    a5: Symbol('whatever'),
+    a4: NaN,
+    a5: Infinity,
+    a6: '',
+    a7: Symbol('whatever'),
     m1: function () {},
     m2: function () {},
     m3: function () {}
   };
 
-  let iNothingable = new DuckInterface(['m1', 'm2', 'm3'], ['a1', 'a2', 'a3', 'a4', 'a5']);
+  let iNothingable = new DuckInterface(['m1', 'm2', 'm3'], ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7']);
 
   iNothingable.isImplementedBy(object);
 });
@@ -53,13 +55,15 @@ test('throws error for attributes defined as methods', () => {
     a1: null,
     a2: false,
     a3: 0,
-    a4: '',
-    a5: Symbol('whatever')
+    a4: NaN,
+    a5: Infinity,
+    a6: '',
+    a7: Symbol('whatever')
   };
 
-  let iNothingable = new DuckInterface(['a1', 'a2', 'a3', 'a4', 'a5']);
+  let iNothingable = new DuckInterface(['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7']);
 
-  expect(() => iNothingable.isImplementedBy(object)).toThrow('Missing methods: a1, a2, a3, a4, a5.');
+  expect(() => iNothingable.isImplementedBy(object)).toThrow('Missing methods: a1, a2, a3, a4, a5, a6, a7.');
 });
 
 test('throws error for methods defined as attributes', () => {
